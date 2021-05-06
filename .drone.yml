@@ -5,6 +5,7 @@ steps:
   - name: compile-beta-lite
     image: "rzlamrr/dvstlab:lite"
     commands: 
+      - "apt update -qq -y && DEBIAN_FRONTEND=noninteractive apt install -qq -y openjdk-8-jdk"
       - "git clone https://github.com/dvstLab/ginkgo-kernel -b R silont"
       - "rm -rf .git"
       - "cd silont"
